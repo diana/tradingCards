@@ -2,12 +2,12 @@ class CardsController < ApplicationController
 
     def index
         cards = Card.all
-        render json: cards
+        render json: cards, include: [:owner]
     end
 
     def show
         card = Card.find(params[:id])
-        render json: card
+        render json: card, inclued: [:owner]
     end
 
     def create
@@ -16,7 +16,7 @@ class CardsController < ApplicationController
             description: params[:description],
             owner_id: params[:owner_id]
         )
-        redirect_to 'https://localhost:"our local host number"/'
+        redirect_to 'https://localhost:3001/'
     end
 
     def update_owner
