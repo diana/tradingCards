@@ -13,10 +13,13 @@ class CardsController < ApplicationController
     def create
         card = Card.create(
             name: params[:name],
+            revered_for: params['revered-for'],
             description: params[:description],
-            owner_id: params[:owner_id]
+            image_url: params['image-url'],
+            info_url: params['info-url'],
+            owner_id: params['owner-id']
         )
-        redirect_to 'https://localhost:3001/'
+        redirect_to 'http://localhost:3001/'
     end
 
     def update_owner
