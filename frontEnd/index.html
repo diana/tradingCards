@@ -18,6 +18,20 @@
             </ul>
         </nav>
     </header>
+    <form method="POST" action="http://localhost:3000/cards">
+        <label>Name:</label>
+        <input name="name" />
+        <label>Famous for:</label>
+        <input name="revered_for" />
+        <label>Description:</label>
+        <input name="description" />
+        <label>Image URL:</label>
+        <input name="image_url" />
+        <label>Description Source:</label>
+        <input name="info_url" /> 
+        <select name="owner_id" id="dropdown"></select>
+        <input type="submit" /> 
+    </form>
     <div class="cards">    
     </div>
     <script src='app.js'></script>
