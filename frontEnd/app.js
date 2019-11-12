@@ -11,7 +11,7 @@ function handleRespone(response){
 function showCardName(cards){
     cards.map(card => {
         cardName = document.createElement('h2')
-        cardName.innerText = card.name
+        cardName.innerHTML = `<a href=show.html?id=${card.id}>${card.name}</a>`
         cardBody.appendChild(cardName)
     })
 }
