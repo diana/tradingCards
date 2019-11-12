@@ -14,7 +14,10 @@ ActiveRecord::Schema.define(version: 2019_11_11_213428) do
 
   create_table "cards", force: :cascade do |t|
     t.string "name"
+    t.string "revered_for"
     t.string "description"
+    t.string "image_url"
+    t.string "info_url"
     t.integer "owner_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
