@@ -6,7 +6,6 @@ body{
 header{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 header > img.logo {
@@ -36,33 +35,127 @@ header > nav > ul > li{
     justify-content: space-around;
 }
 
+section{
+    display: flex;
+    flex-flow: row;
+}
+
+section > form{
+    flex-flow: column;
+    border: solid black;
+    padding: 1%;
+    width: 150px;
+    height: 247.13px;
+    display: flex;
+    justify-content: baseline;
+    background-color: #7f7979;
+    font-size: 9pt;
+    border-radius: 11px;
+    color: #e9e9e9;
+    justify-content: space-around;
+    box-shadow: 1.5px 1.5px rgb(60, 58, 58);
+    opacity: 70%;
+    margin: 15px 15px 0px 15px;
+}
+
+section > div > form > .title{
+    font-size: 12pt;
+    color: #92B4A7;
+    text-shadow: .4px .4px 0 #464242;
+}
+
+section > form > .text{
+    border-radius: 3px;
+    border: none;
+    width: 143px;
+    height: 13.667px;
+}
+
+section  > form > .select{
+    border: none;
+    width: 143px;
+    height: 13.667px;
+
+}
+
+section > form > .submit{
+    margin-top: 6px;
+    border-radius: 3px;
+    border: none;
+    width: 143px;
+    height: 13.667px;
+
+}
+
+
 .cards{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.cards > h2{
+
+.cards > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border: solid black;
     background-color: #7F7979;
     opacity: 70%;
     padding: 1%;
-    color: #92B4A7;
-    font-size: 10pt;
     width: 150px;
-    height: 80px;
+    height: 210px;
     border-radius: 9px;
     text-shadow: 0.4px 0.4px black;
     text-align: center;
-    padding-top: 5%;
     box-shadow: 1.5px 1.5px rgb(60, 58, 58);
     -webkit-transition: width height 3s;
     transition: width height 3s;
+    margin: 15px;
 }
 
-.cards > h2:hover{
-    width: 175px;
-    height: 100px;
+.cards > div:hover{
+    transform: scale3d(1.1, 1.1, 1.1);
     background-color: rgb(174, 171, 171);
     color: #4038AF;
+}
+
+.cards > div > a.fill-div{
+    position: relative;
+    top: 0;
+    bottom: 0;
+    display: block;
+    height: 100%; 
+    width: 100%;
+}
+
+.cards > div > img{
+    border-radius: 4px;
+    max-width: 125px;
+    height: auto;
+}
+
+.cards > div > h2{
+    color: #92B4A7;
+    font-size: 10pt;
+}
+
+.cards > div:hover > h2{
+    background-color: rgb(174, 171, 171);
+    color: #4038AF;
+}
+
+.card-info > article{
+    display: flex;
+    flex-direction: row;
+}
+
+.card-info > article > h5{
+    margin: 15px;
+}
+
+.card-info > article > img{
+    border-radius: 9px;
+    width: 250px;
+    height: auto;
 }

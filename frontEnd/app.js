@@ -20,8 +20,13 @@ function handleRespone(response){
 
 function showCardName(cards){
     cards.map(card => {
+        cardDiv = document.createElement('div')
         cardName = document.createElement('h2')
-        cardName.innerHTML = `<a href=show.html?id=${card.id}>${card.name}</a>`
-        cardBody.appendChild(cardName)
+        cardImage = document.createElement('img')
+        cardDiv.innerHTML = `<a href=show.html?id=${card.id} class='fill-div'></a>`
+        cardName.innerText = card.name
+        cardImage.src = card.image_url
+        cardBody.append(cardDiv)
+        cardDiv.append(cardImage, cardName)
     })
 }
