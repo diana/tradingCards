@@ -1,4 +1,4 @@
-
+const cardBody = document.querySelector('.cards')
 
 fetch('http://localhost:3000/cards')
     .then(handleRespone)
@@ -12,6 +12,6 @@ function showCardName(cards){
     cards.map(card => {
         cardName = document.createElement('h2')
         cardName.innerText = card.name
-        document.body.appendChild(cardName)
+        cardBody.appendChild(cardName)
     })
 }
