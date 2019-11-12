@@ -18,23 +18,24 @@
             </ul>
         </nav>
     </header>
-    <form method="POST" action="http://localhost:3000/cards">
-        <label for="scientist-name">Name:</label>
-        <input name="name" id="scientist-name"/>
-        <label for="famous" >Famous for:</label>
-        <input name="revered-for" id="famous"/>
-        <label for="description">Description:</label>
-        <input name="description" id="description"/>
-        <label for="image">Image URL:</label>
-        <input name="image-url" id="image"/>
-        <label for="description-source">Description Source:</label>
-        <input name="info-url" id="description-source"/> 
-        <label>Card Owner:</label>
-        <select name="owner-id" id="drop-down"></select>
-        <input type="submit" /> 
-    </form> 
-    <div class="cards">    
-    </div>
+    <section class="cards">
+        <form method="POST" action="http://localhost:3000/cards">
+            <label class='title'>Create Scientist Card</label>
+            <label for="scientist-name">Name:</label>
+            <input class="text" name="name" id="scientist-name"/>
+            <label for="famous" >Famous for:</label>
+            <input class="text" name="revered-for" id="famous"/>
+            <label for="description">Description:</label>
+            <input class="text" name="description" id="description"/>
+            <label for="image">Image URL:</label>
+            <input class="text" name="image-url" id="image"/>
+            <label for="description-source">Description Source:</label>
+            <input class="text" name="info-url" id="description-source"/> 
+            <label>Card Owner:</label>
+            <select class="select" name="owner-id" id="drop-down"></select>
+            <input class ="submit" type="submit" /> 
+        </form> 
+    </section>
     <script src='app.js'></script>
 </body>
 </html>
