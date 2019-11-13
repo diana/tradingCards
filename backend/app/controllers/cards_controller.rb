@@ -22,9 +22,9 @@ class CardsController < ApplicationController
         redirect_to 'http://localhost:3001/'
     end
 
-    def update_owner
-            card = Card.find(params[:id])
-            card.update(owner_id: params[:owner_id])
+    def update
+        card = Card.find(params[:id])
+        card.update(owner_id: params[:owner_id])
     end
 
     def delete
