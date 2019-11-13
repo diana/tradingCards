@@ -19,10 +19,15 @@ function showOwnerInfo(owner){
     ownerName.innerText = owner.name
     deleteOwner.innerText = 'delete'
     deleteOwner.addEventListener('click', (event) => {
-        div.remove()
-        fetch(`http://localhost:3000/owners/${id}`, {
-            method: 'DELETE'
-        })
+        console.log(owner.cards)
+        if (owner.cards.length > 0){
+            alert("You must trade your cards!")
+        } else {
+            div.remove()
+            fetch(`http://localhost:3000/owners/${id}`, {
+                method: 'DELETE'
+            })
+        }
     })
     
     userName.appendChild(div)
