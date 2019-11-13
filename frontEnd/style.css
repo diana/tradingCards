@@ -8,7 +8,7 @@ header{
     justify-content: space-between;
 }
 
-header > img.logo {
+header > a > img.logo {
     align-items: center;
     width: 250px;
     /* margin-left: 5%; */
