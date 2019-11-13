@@ -17,7 +17,14 @@
             </ul>
         </nav>
     </header>
-    <section class="users"></section>
+    <section class="users">
+        <form method="POST" action="http://localhost:3000/owners">
+            <label class='title'>Create New User</label>
+            <label for="user-name">Name:</label>
+            <input class="text" name="name" id="user-name"/>
+            <input class ="submit" type="submit" /> 
+        </form> 
+    </section>
     <script src='user.js'></script>
 </body>
 </html>

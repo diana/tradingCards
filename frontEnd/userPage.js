@@ -12,9 +12,21 @@ fetch(`http://localhost:3000/cards/`)
     .then(showOwnersCards)
 
 function showOwnerInfo(owner){
+    const div = document.createElement('div')
     const ownerName = document.createElement('h2')
+    const deleteOwner = document.createElement('button')
+
     ownerName.innerText = owner.name
-    userName.appendChild(ownerName)
+    deleteOwner.innerText = 'delete'
+    deleteOwner.addEventListener('click', (event) => {
+        div.remove()
+        fetch(`http://localhost:3000/owners/${id}`, {
+            method: 'DELETE'
+        })
+    })
+    
+    userName.appendChild(div)
+    div.append(ownerName, deleteOwner)
 }
 
 function filterCardByOwners(cards){
