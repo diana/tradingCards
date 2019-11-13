@@ -12,9 +12,14 @@ class OwnersController < ApplicationController
 
     def create
         owner = Owner.create(
-            name: params[:name], include: [:cards]
+            name: params[:name]
         )
-        redirect_to 'https://localhost:3001/'
+        redirect_to 'http://localhost:3001/user.html'
+    end
+
+    def destroy
+        owner = Owner.find(params[:id])
+        owner.delete
     end
 
 end
