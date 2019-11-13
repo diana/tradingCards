@@ -45,7 +45,7 @@ section > form{
     border: solid black;
     padding: 1%;
     width: 150px;
-    height: 247.13px;
+    height: 225.57px;
     display: flex;
     justify-content: baseline;
     background-color: #7f7979;
@@ -103,6 +103,8 @@ section > form > .submit{
     background-color: #7F7979;
     opacity: 70%;
     padding: 1%;
+    padding-top: 2.6%;
+    padding-bottom: 2.6%;
     width: 150px;
     height: 210px;
     border-radius: 9px;
