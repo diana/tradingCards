@@ -11,6 +11,7 @@ return response.json()
 }
 
 function showCardInfo(card){
+    console.log(card)
         const cardName = document.createElement('h2')
         const cardOwner = document.createElement('h4')
         const cardDescription = document.createElement('h5')
