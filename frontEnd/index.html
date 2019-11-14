@@ -11,31 +11,32 @@
     <header>
         <a href=index.html><img class='logo' src='https://i.imgur.com/2ARp8nn.png'/></a>
         <nav>
-            <ul>
-                <li><a href=index.html>home</a></li>
-                <li>|</li>
-                <li><a href=user.html>users</a></li>
-            </ul>
+            <p><a href=index.html>home</a> | <a href=user.html>users</a></p>
         </nav>
     </header>
     <section class="cards">
-        <form method="POST" action="http://localhost:3000/cards">
+        <form class="form" method="POST" action="http://localhost:3000/cards">
             <label class='title'>Create Scientist Card</label>
             <label for="scientist-name">Name:</label>
-            <input class="text" name="name" id="scientist-name"/>
+            <input class="text" name="name" id="scientist-name" required/>
             <label for="famous" >Famous for:</label>
-            <input class="text" name="revered-for" id="famous"/>
+            <input class="text" name="revered-for" id="famous" required/>
             <label for="description">Description:</label>
-            <input class="text" name="description" id="description"/>
+            <input class="text" name="description" id="description" required/>
             <label for="image">Image URL:</label>
-            <input class="text" name="image-url" id="image"/>
+            <input class="text" name="image-url" id="image" required/>
             <label for="description-source">Description Source:</label>
-            <input class="text" name="info-url" id="description-source"/> 
+            <input class="text" name="info-url" id="description-source" required/> 
             <label>Card Owner:</label>
-            <select class="select" name="owner-id" id="drop-down"></select>
+            <select class="select" name="owner-id" id="drop-down" required></select>
             <input class ="submit" type="submit" /> 
         </form> 
     </section>
     <script src='app.js'></script>
+    <footer>
+        <p><a href=https://github.com/adampaez88>Adam</a> & <a href=https://github.com/diana-mm>Diana's</a> Mod2 Project</p>
+        <p><a href=https://flatironschool.com>Flatiron School</a></p>
+        <p id='copywrite'>site design / logo © 2019</p>
+    </footer>
 </body>
 </html>
