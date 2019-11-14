@@ -18,16 +18,16 @@ function showCardInfo(card){
         const cardName = document.createElement('h2')
         const cardField = document.createElement('h3')
         const cardOwner = document.createElement('h4')
-        const cardDescription = document.createElement('h5')
+        const cardDescription = document.createElement('label')
         const cardImage = document.createElement('img')
         
         cardName.innerText = card.name
         cardField.innerText = `Field of Study: ${card.revered_for}`
-        cardOwner.innerText = `Owner: ${card.owner.name}`
+        cardOwner.innerHTML = `<a href=user-page.html?id=${card.owner.id}>Owner: ${card.owner.name}</a>`
         cardImage.src = card.image_url
         cardDescription.innerText = card.description
         
-        cardInfo.append(cardName, cardField, cardOwner)
+        cardInfo.append(cardOwner, cardField, cardName)
         article.append(cardImage, cardDescription)
     }
     
@@ -53,5 +53,5 @@ form.addEventListener('submit', function(event) {
         body: JSON.stringify({
             owner_id: dropDown.value
         })
-    })
+    }).then(window.location = `http://localhost:3001/show.html?id=${id}`)
 })

@@ -12,8 +12,14 @@ function handleRespone(response){
 
 function showOwners(owners){
     return owners.map(owner => {
-        const ownerName = document.createElement('ol')
-        ownerName.innerHTML = `<a href=user-page.html?id=${owner.id}>${owner.name}</a>`
+        const ownerName = document.createElement('label')
+
+        ownerName.innerText = `${owner.name}`
+
         userName.appendChild(ownerName)
+
+        ownerName.addEventListener('click', function(){
+            window.location = `user-page.html?id=${owner.id}`
+        })
     })
 }
