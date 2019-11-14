@@ -8,43 +8,35 @@ header{
     justify-content: space-between;
     border-top: 2px solid #464242;
     border-bottom: 1px solid #464242;
+    width: 100%;
+    align-items: center;
+    margin-right: 15px;
 }
 
+/* header > a{
+    width: 50%;
+} */
+
 header > a > img.logo {
-    align-items: center;
+    /* align-items: center; */
     width: 250px;
 }
 
-header > nav{
-    display: flex;
-    align-items: center;
-    width: 50%;
+header > nav {
+    margin: 2%;
 }
 
-header > nav > ul{
-    padding: .5%;
-    display: flex;
-    margin: 5%;
-    width: 100%;
-    padding-left: 70%;
-}
-
-header > nav > ul > li{
-    display: flex;
-    justify-self: right;
-    margin: 5%;
+header > nav > p{
     color: #7F7979;
+    font-size: 16pt;
 }
 
-header > nav > ul > li > a{
-    display: flex;
-    justify-self: right;
+header > nav > p > a{
     color: #7F7979;
     text-decoration: none;
 }
 
 section{
-    display: flex;
     flex-flow: row;
 }
 
@@ -53,7 +45,7 @@ section > form{
     border: solid black;
     padding: 1%;
     width: 150px;
-    height: 225.57px;
+    height: 210px;
     display: flex;
     justify-content: baseline;
     background-color: #7f7979;
@@ -64,6 +56,9 @@ section > form{
     box-shadow: 1.5px 1.5px rgb(60, 58, 58);
     opacity: 70%;
     margin: 15px 15px 0px 15px;
+    padding-top: 2.6%;
+    padding-bottom: 2.6%;
+
 }
 
 section > div > form > .title{
@@ -174,11 +169,7 @@ section > form > .submit{
     flex-wrap: wrap;
 }
 
-
 .cards > div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     border: solid black;
     background-color: #7F7979;
     opacity: 70%;
@@ -194,7 +185,12 @@ section > form > .submit{
     -webkit-transition: width height 3s;
     transition: width height 3s;
     margin: 15px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-content: space-between;
 }
+
 
 .cards > div:hover{
     transform: scale3d(1.1, 1.1, 1.1);
@@ -220,6 +216,7 @@ section > form > .submit{
 .cards > div > h2{
     color: #92B4A7;
     font-size: 10pt;
+    text-align: center;
 }
 
 .cards > div:hover > h2{
@@ -295,36 +292,93 @@ section > form > .submit{
     border-style: outset;
 }
 
+.card-info > p{
+    height: 10pt;
+    margin: 0pt;
+}
+
+.card-info > p > p{
+    height: 10pt;
+    margin: 0pt;
+}
+
+.card-info > p > p > a{
+    font-size: 6pt;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #464242;
+    text-decoration: none;
+}
+
+.user-head > div{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 15px 0;
+}
+
+.user-head > div > button {
+    background-color:#7F7979;
+    border-radius: 15%;
+    height: 2rem;
+    align-self: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    color: rgb(206, 204, 204);
+    text-shadow: .4px .4px 0 #464242;
+    border-style: inset;
+    margin-right: 2.7rem;
+}
+
 .user-page{
     display: flex;
     flex-flow: row wrap;
 }
 
 .user-page > div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     border: solid black;
+    background-color: #7F7979;
+    opacity: 70%;
     padding: 1%;
+    padding-top: 2.6%;
+    padding-bottom: 2.6%;
     width: 150px;
     height: 210px;
-    display: flex;
-    justify-content: baseline;
-    background-color: #7f7979;
-    font-size: 9pt;
-    border-radius: 11px;
-    justify-content: space-around;
-    box-shadow: 1.5px 1.5px rgb(60, 58, 58);
-    opacity: 70%;
-    margin: 15px 15px 0px 15px;
-    text-align: center;
-    font-size: 12pt;
-    color: #92B4A7;
+    border-radius: 9px;
     text-shadow: 0.4px 0.4px black;
+    text-align: center;
+    box-shadow: 1.5px 1.5px rgb(60, 58, 58);
+    -webkit-transition: width height 3s;
+    transition: width height 3s;
+    margin: 15px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-content: space-between;
 }
 
 .user-page > div > img{
     border-radius: 4px;
     max-width: 125px;
     height: auto;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    border-bottom: 2px solid #464242;
+    border-top: 1px solid #464242;
+}
+
+footer > p{
+    margin: 2%;
+    color: #464242;
+    font-size: 10pt;
+}
+
+footer > p > a{
+    color: #464242;
+    text-decoration: none;
+    font-size: 10pt;
 }
