@@ -13,14 +13,15 @@
         <nav>
             <ul>
                 <li><a href=index.html>home</a></li>
-                <li><a href=user.html>User Login</a></li>
+                <li>|</li>
+                <li><a href=user.html>users</a></li>
             </ul>
         </nav>
     </header>
     <section class="users">
-        <form method="POST" action="http://localhost:3000/owners">
-            <label class='title'>Create New User</label>
-            <label for="user-name">Name:</label>
+        <form method="POST" action="http://localhost:3000/owners" id='new-user'>
+            <label class='title'>Create New User:</label>
+            <label id="name" for="user-name">Name:</label>
             <input class="text" name="name" id="user-name"/>
             <input class ="submit" type="submit" /> 
         </form> 

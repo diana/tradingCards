@@ -11,7 +11,7 @@ class CardsController < ApplicationController
     end
 
     def create
-        card = Card.create(
+        card = Card.new(
             name: params[:name],
             revered_for: params['revered-for'],
             description: params[:description],
@@ -19,7 +19,11 @@ class CardsController < ApplicationController
             info_url: params['info-url'],
             owner_id: params['owner-id']
         )
-        redirect_to 'http://localhost:3001/'
+        if card.save
+            redirect_to 'http://localhost:3001/'
+        else
+            render json: {error: 'Invalid Entry'}
+        end
     end
 
     def update

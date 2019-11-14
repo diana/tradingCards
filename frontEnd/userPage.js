@@ -1,4 +1,5 @@
-const userName = document.querySelector('.user-page')
+const userCards = document.querySelector('.user-page')
+const userName = document.querySelector('.user-head')
 const params = new URLSearchParams(window.location.search)
 const id = params.get('id')
 
@@ -16,7 +17,7 @@ function showOwnerInfo(owner){
     const ownerName = document.createElement('h2')
     const deleteOwner = document.createElement('button')
 
-    ownerName.innerText = owner.name
+    ownerName.innerText = `${owner.name}'s Cards:`
     deleteOwner.innerText = 'delete'
     deleteOwner.addEventListener('click', (event) => {
         console.log(owner.cards)
@@ -26,7 +27,7 @@ function showOwnerInfo(owner){
             div.remove()
             fetch(`http://localhost:3000/owners/${id}`, {
                 method: 'DELETE'
-            })
+            }).then(window.location = 'http://localhost:3001/user.html')
         }
     })
     
@@ -44,9 +45,19 @@ function showOwnersCards(cards){
 }
 
 function createCardList(card){
-    const cardName = document.createElement('ol')
-    cardName.innerHTML = `<a href=show.html?id=${card.id}>${card.name}</a>`
-    userName.appendChild(cardName)
+    const cardDiv = document.createElement('div')
+    const cardName = document.createElement('label')
+    const cardImage = document.createElement('img')
+
+    cardName.innerText = card.name
+    cardImage.src = card.image_url
+
+    cardDiv.addEventListener('click', function(){
+        window.location = `show.html?id=${card.id}`
+    })
+
+    userCards.append(cardDiv)
+    cardDiv.append(cardImage, cardName)
 }
     // const ownerCardName = document.createElement('ol')
     // ownerCardName.innerHTML = `<a href=show.html?id=${cards.id}>${owner.cards.name}</a>`

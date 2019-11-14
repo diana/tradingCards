@@ -23,9 +23,14 @@ function showCardName(cards){
         cardDiv = document.createElement('div')
         cardName = document.createElement('h2')
         cardImage = document.createElement('img')
-        cardDiv.innerHTML = `<a href=show.html?id=${card.id} class='fill-div'></a>`
+
         cardName.innerText = card.name
         cardImage.src = card.image_url
+
+        cardDiv.addEventListener('click', function(){
+            window.location = `show.html?id=${card.id}`
+        })
+
         cardBody.append(cardDiv)
         cardDiv.append(cardImage, cardName)
     })
