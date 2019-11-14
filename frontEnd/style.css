@@ -61,7 +61,7 @@ section > form{
 
 }
 
-section > div > form > .title{
+section > form > .title{
     font-size: 12pt;
     color: #92B4A7;
     text-shadow: .4px .4px 0 #464242;
@@ -369,6 +369,7 @@ footer{
     align-content: center;
     border-bottom: 2px solid #464242;
     border-top: 1px solid #464242;
+    margin-top: 50px;
 }
 
 footer > p{
@@ -379,6 +380,5 @@ footer > p{
 
 footer > p > a{
     color: #464242;
-    text-decoration: none;
     font-size: 10pt;
 }
