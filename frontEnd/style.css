@@ -169,6 +169,10 @@ section > form > .submit{
     flex-wrap: wrap;
 }
 
+#drop-down{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .cards > div{
     border: solid black;
     background-color: #7F7979;

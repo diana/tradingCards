@@ -28,7 +28,9 @@
             <label for="description-source">Description Source:</label>
             <input class="text" name="info-url" id="description-source" required/> 
             <label>Card Owner:</label>
-            <select class="select" name="owner-id" id="drop-down" required></select>
+            <select class="select" name="owner-id" id="drop-down" required>
+                <option value="" selected disabled hidden id="initial">Select Name</option>
+            </select>
             <input class ="submit" type="submit" /> 
         </form> 
     </section>
