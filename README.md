@@ -15,3 +15,5 @@ tradingCards App Overview:
 This is an app for science lovers! With this app you can see cards with famous scientist and trade with others on the app! Each card is a link to a page more information on the scientist that is displays. This page also lets you know who currently owns that card, and allows you trade with the owner of that card.
 
  On the main page you can create new scientist cards for your favorite scientist that might not be listed, and if you’re not a user you can head up to the navigation bar and click user to send you to the user page where you can register yourself as a user! Each user has their own page that shows which cards the own and allows them to delete their account (but first make sure you don’t own any cards!) once they are done with the trading card hobby!
+
+ Check out a video of our project here https://youtu.be/2gsJPWASqIk
